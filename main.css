@@ -1,0 +1,189 @@
+/* Modern, saavutettava värimaailma ja fonttikoot */
+:root {
+  --main-bg: #f7f7fa;
+  --main-color: #22223b;
+  --accent: #9a8c98;
+  --contrast: #4a4e69;
+  --button-bg: #22223b;
+  --button-color: #fff;
+  --nav-bg: #4a4e69;
+  --nav-color: #fff;
+  --focus-outline: #ffb703;
+  --font-main: 'Inter', Arial, sans-serif;
+  --font-title: 'Dancing Script', cursive;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--main-color);
+  font-family: var(--font-main);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: var(--contrast);
+}
+
+nav {
+  background: var(--nav-bg);
+  color: var(--nav-color);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h1 {
+  font-size: 2rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: var(--nav-color);
+  text-decoration: none;
+  font-size: 1.125rem;
+  padding: 0.25rem 0.5rem;
+}
+nav a:focus, nav a:hover {
+  outline: 2px solid var(--focus-outline);
+  background: var(--accent);
+  color: var(--main-bg);
+}
+
+.hero {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: var(--main-bg);
+  padding: 3rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 24px 0 rgba(250, 168, 140, 0.12);
+  border-radius: 0 0 2rem 2rem;
+}
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.hero__cta {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.hero__cta:focus {
+  outline: 2px solid var(--focus-outline);
+}
+
+.menu {
+  padding: 2rem 1rem;
+}
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.menu__item {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(74, 78, 105, 0.08);
+  padding: 1rem;
+  text-align: center;
+}
+.menu__item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.menu__item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.menu__item p {
+  font-size: 1rem;
+  color: var(--main-color);
+}
+
+footer {
+  background: var(--contrast);
+  color: var(--nav-color);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Dialog & Form */
+dialog {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(74, 78, 105, 0.15);
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+}
+.myForm label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.myForm input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+.myForm input:focus {
+  outline: 2px solid var(--focus-outline);
+}
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.btn {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--button-bg);
+  border: 2px solid var(--button-bg);
+}
+.btn:focus {
+  outline: 2px solid var(--focus-outline);
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  background: var(--contrast);
+  color: var(--nav-color);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  border-radius: 0.5rem;
+}
+.skip-link:focus {
+  left: 1rem;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fi" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Arabialainen kahvila - verkkosivusto, jossa voit tutustua arabialaisiin jälkiruokiin ja juomiin sekä liittyä jäseneksi." />
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/93e0147886.js" crossorigin="anonymous"></script>
+
+  <title>Arabialainen kahvila</title>
+</head>
+<body>
+  <nav>
+    <h1>Arabialainen kahvila</h1>
+    <ul>
+      <li><a href="#">Etusivu</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Ota yhteyttä</a></li>
+      <li><a href="#">Kirjaudu sisään <i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO FLEXBOX -->
+  <header class="hero" role="banner" aria-label="Tervetulobanneri">
+    <div class="hero__inner">
+      <h2 class="hero__title">Tervetuloa arabialaiseen kahvilaan</h2>
+      <p class="hero__subtitle">Aitoja makuja, itämaisia jälkiruokia ja perinteisiä juomia.</p>
+      <button class="btn hero__cta" id="showdialog-dup" aria-haspopup="dialog" aria-controls="signupDialog">
+        Liity jäseneksi
+      </button>
+    </div>
+  </header>
+
+
+  <section>
+    <dialog id="signupDialog" aria-labelledby="dialogTitle">
+      <form class="myForm" method="dialog">
+        <h3 class="main_cl" id="dialogTitle">Rekisteröi tietosi</h3>
+        <fieldset>
+          <label for="yourName">Koko nimi (vähintään 3 merkkiä):</label>
+          <input type="text" id="yourName" name="yourName" placeholder="Koko nimi" minlength="3" maxlength="30" required autocomplete="name"/>
+          <label for="yourEmail">Sähköposti:</label>
+          <input type="email" id="yourEmail" name="yourEmail" placeholder="example@email.com" required autocomplete="email"/>
+          <label for="passWord">Salasana:</label>
+          <input type="password" id="passWord" name="passWord" placeholder="Salasana" pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$" required autocomplete="new-password"/>
+          <menu class="formActions">
+            <button type="button" class="btn btn--ghost" id="closeDialog">Sulje</button>
+            <button value="submit" class="btn">Lähetä</button>
+          </menu>
+        </fieldset>
+      </form>
+    </dialog>
+  </section>
+
+
+  <main>
+    <img src="./img/Arabialainen kahvi1.png" alt="Arabialainen kahvikuppi">
+    <h2>Kahvilastamme</h2>
+    <h3>Arabialaiset juomat</h3>
+    <p>
+      Arabialainen ja turkkilainen kahvi eivät ole vain juomia, vaan osa arabialaista perinnettä ja kulttuuria. Tarjoamme laadukkaimmat kahvit sekä laajan valikoiman aitoja itämaisia jälkiruokia.
+    </p>
+  </main>
+
+<!-- RUOKALISTA GRID -->
+<section class="menu">
+  <h2>Jälkiruoka- ja juomalista</h2>
+  <div class="menu__grid">
+    <div class="menu__item">
+      <img src="./img/Baklava.jpg" alt="Itämainen baklava">
+      <h3>Baklava</h3>
+      <p>Ohut taikina täytetty pähkinöillä ja päällystetty hunajalla tai siirapilla.</p>
+    </div>
+    <div class="menu__item">
+      <img src="./img/Kunafa.jpg" alt="Arabialainen kunafa">
+      <h3>Kunafa</h3>
+      <p>Itämainen jälkiruoka, valmistettu kunafa-taikinasta ja juustosta tai kermasta, siirapilla.</p>
+    </div>
+    <div class="menu__item">
+      <img src="./img/Maamoul.jpg" alt="Maamoul taatelilla tai pähkinöillä">
+      <h3>Maamoul</h3>
+      <p>Keksi täytetty taatelilla, pähkinöillä tai pistaasilla.</p>
+    </div>
+    <div class="menu__item">
+      <img src="./img/Baklava.jpg" alt="Perinteinen basbousa">
+      <h3>Basbousa</h3>
+      <p>Itämainen mannasuurimojälkiruoka, päällystetty kookoksella ja siirapilla.</p>
+    </div>
+    <div class="menu__item">
+      <img src="./img/Qatayef.jpg" alt="Ramadanin qatayef">
+      <h3>Qatayef</h3>
+      <p>Pienet leivonnaiset täytetty kermalla tai pähkinöillä, tarjoillaan yleensä Ramadanin aikana.</p>
+    </div>
+    <div class="menu__item">
+      <img src="./img/Arabialainen kahvi1.png" alt="Aito arabialainen kahvi">
+      <h3>Arabialainen kahvi</h3>
+      <p>Perinteinen kahvi kardemummalla, tarjoillaan taatelin kanssa.</p>
+    </div>
+    <div class="menu__item">
+      <img src="./img/Turkkilainen kahvi.png" alt="Turkkilainen kahvi">
+      <h3>Turkkilainen kahvi</h3>
+      <p>Hienoksi jauhettu kahvi, valmistettu turkkilaisella tavalla ja tarjoillaan jälkiruoan kanssa.</p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+   TK
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
